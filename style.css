@@ -1,0 +1,86 @@
+html{
+    scroll-behavior: smooth;
+}
+header{
+    position: fixed;
+    z-index: 1;
+    width:100%;
+}
+#home-section {
+    width: 100%;
+    height: 833px;
+    padding-top: 130px;
+}
+.hi {
+    font-size: 35px;
+    font-family: 'Dancing Script', Georgia, Times, serif;
+}
+.name {
+    font-size: 44px;
+    font-family: cursive;
+}
+.mypro{
+    color:firebrick;
+}
+.a{
+    font-size: 60px;
+    color:firebrick;
+}
+.profile {
+    font-family: 'Lobster', Georgia, Times, serif;
+    font-size: 45px;
+}
+table, th, td {
+    padding: 20px;
+    margin-top: 45px;
+    font-size: 20px;
+    margin-left: -20px;
+}
+.about{
+    padding-top:50px;
+}
+.mapouter {
+    position: relative;
+    text-align: right;
+    width: 500px;
+    height: 350px;
+}
+.gmap_canvas {
+    overflow: hidden;
+    background: none!important;
+    width: 500px;
+    height: 400px;
+}
+.gmap_iframe {
+    width: 500px!important;
+    height: 350px!important;
+}
+.frame{
+    position: relative;
+    padding-bottom:56.25%;
+    padding-top:35px;
+    height: 0;
+    overflow:hidden
+}
+.frame iframe{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+.para{
+    font-size:20px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+footer{
+    height: 150px;
+}
+.btn{
+    background-color:firebrick;
+    color:white;
+}
+.linkcolor{
+    color:firebrick;
+    text-decoration:none;
+}
