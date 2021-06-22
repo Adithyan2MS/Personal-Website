@@ -8,7 +8,7 @@ header{
 }
 #home-section {
     width: 100%;
-    height: 833px;
+    height: 850px;
     padding-top: 130px;
 }
 .hi {
@@ -22,7 +22,7 @@ header{
 .mypro{
     color:firebrick;
 }
-.a{
+.span1{
     font-size: 60px;
     color:firebrick;
 }
@@ -83,4 +83,28 @@ footer{
 .linkcolor{
     color:firebrick;
     text-decoration:none;
+}
+.top-icon{
+    font-size:25px;
+}
+ul{
+    list-style-type: none;
+}
+.skill-list {
+    font-size: 29px;
+
+}
+.sub-list{
+    padding-top: 20px;
+}
+.edit-icon {
+    width: 51px;
+    height: 47px;
+    border-radius: 20%;
+    background-color: firebrick;
+    color: white;
+    float:left;
+}
+.icon-name{
+    padding-left: 70px;
 }
