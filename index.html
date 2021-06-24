@@ -142,33 +142,33 @@
             <h1 class="text-center">Contact Me</h1>
             <div class="row pt-5">
                 <div class="col-md-12">
-                    <form>
+                    <form method="post" id="gform" autocomplete="off" name="google-sheet">
                         <div class="form-row">
                           <div class="form-group col-md-6">
                             <label for="inputEmail4"> Name</label>
-                            <input type="text" class="form-control" id="inputEmail4" placeholder="Name">
+                            <input required type="text" name="Name" class="form-control" id="inputEmail4" placeholder="Name">
                           </div>
                           <div class="form-group col-md-6">
                             <label for="inputPassword4">Place</label>
-                            <input type="text" class="form-control" id="inputPassword4" placeholder="Place">
+                            <input required type="text" name="Place" class="form-control" id="inputPassword4" placeholder="Place">
                           </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                               <label for="inputEmail4"> E-mail</label>
-                              <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                              <input required type="email" name="Email" class="form-control" id="inputEmail4" placeholder="Email">
                             </div>
                             <div class="form-group col-md-6">
                               <label for="inputPassword4">Mobile</label>
-                              <input type="tel" class="form-control" id="inputPassword4" placeholder="Mobile">
+                              <input required type="tel" name="Phone" class="form-control" id="inputPassword4" placeholder="Mobile">
                             </div>
                           </div>
                         <div class="form-group">
                           <label for="inputAddress">Comment</label>
-                          <textarea cols="30" rows="10" class="form-control" placeholder="type your message here:"></textarea>
+                          <textarea required name="Comment" cols="30" rows="10" class="form-control" placeholder="type your message here:"></textarea>
                         </div>
                         <div class="form-group text-center">
-                        <button type="submit" class="btn" style="width: 100%;">Submit</button>
+                        <button name="submit" type="submit" class="btn" style="width: 100%;">Submit</button>
                     </div>
                       </form>
                 </div>
@@ -199,6 +199,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-replace-svg="nest"></script>
+    <script type="text/javascript">
 
+
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzUTXWYbLgaARTU9ccQaS7VQcvJ-itvqEa2mD2AHARue54SPkoQKb2aKwb7yKWWiucJ/exec'
+              const form = document.forms['google-sheet']
+            
+              form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                  .then(response => alert("You have successfully submitted."))
+                  .catch(error => console.error('Error!', error.message))
+              })
+    </script>
 </body>
 </html>
